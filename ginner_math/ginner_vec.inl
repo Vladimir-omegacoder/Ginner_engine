@@ -31,6 +31,30 @@ namespace gin
 	}
 
 	template<typename T>
+	GINNER_CONSTEXPR T& vec<1, T>::operator[](length_t i)
+	{
+		GINNER_ASSERT_LENGTH(i, 1);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		}
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR const T& vec<1, T>::operator[](length_t i) const
+	{
+		GINNER_ASSERT_LENGTH(i, 1);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		}
+	}
+
+	template<typename T>
 	GINNER_CONSTEXPR vec<1, T> vec<1, T>::operator+() const
 	{
 		return vec<1, T>(x);
@@ -184,6 +208,36 @@ namespace gin
 		x = other.x;
 		y = other.y;
 		return *this;
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR T& vec<2, T>::operator[](length_t i)
+	{
+		GINNER_ASSERT_LENGTH(i, 2);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		}
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR const T& vec<2, T>::operator[](length_t i) const
+	{
+		GINNER_ASSERT_LENGTH(i, 2);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		}
 	}
 
 	template<typename T>
@@ -349,6 +403,42 @@ namespace gin
 		y = other.y;
 		z = other.z;
 		return *this;
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR T& vec<3, T>::operator[](length_t i)
+	{
+		GINNER_ASSERT_LENGTH(i, 3);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		case 2:
+			return z;
+			break;
+		}
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR const T& vec<3, T>::operator[](length_t i) const
+	{
+		GINNER_ASSERT_LENGTH(i, 3);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		case 2:
+			return z;
+			break;
+		}
 	}
 
 	template<typename T>
@@ -524,6 +614,48 @@ namespace gin
 		z = other.z;
 		w = other.w;
 		return *this;
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR T& vec<4, T>::operator[](length_t i)
+	{
+		GINNER_ASSERT_LENGTH(i, 4);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		case 2:
+			return z;
+			break;
+		case 3:
+			return w;
+			break;
+		}
+	}
+
+	template<typename T>
+	GINNER_CONSTEXPR const T& vec<4, T>::operator[](length_t i) const
+	{
+		GINNER_ASSERT_LENGTH(i, 4);
+		switch (i)
+		{
+		case 0:
+			return x;
+			break;
+		case 1:
+			return y;
+			break;
+		case 2:
+			return z;
+			break;
+		case 3:
+			return w;
+			break;
+		}
 	}
 
 	template<typename T>

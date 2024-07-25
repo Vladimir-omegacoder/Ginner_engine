@@ -3,6 +3,7 @@
 #ifndef GINNER_VEC
 
 #define GINNER_VEC
+#include "ginner_mat_setup.h"
 #include "ginner_types.h"
 
 namespace gin
@@ -26,7 +27,14 @@ namespace gin
 		GINNER_CONSTEXPR GINNER_EXPLICIT vec(const vec<1, U>& other);
 
 
+		GINNER_CONSTEXPR static length_t get_length() { return 1; }
+
+
 		GINNER_CONSTEXPR vec<1, T>& operator=(const vec<1, T>& other);
+
+
+		GINNER_CONSTEXPR T& operator[](length_t i);
+		GINNER_CONSTEXPR const T& operator[](length_t i) const;
 
 
 		GINNER_CONSTEXPR vec<1, T> operator+() const;
@@ -51,6 +59,8 @@ namespace gin
 		GINNER_CONSTEXPR vec<1, T>& operator/=(const T& k);
 
 		GINNER_CONSTEXPR vec<1 ,T>& operator%= (const T& k);
+
+
 
 	};
 
@@ -99,7 +109,14 @@ namespace gin
 		GINNER_CONSTEXPR GINNER_EXPLICIT vec(const vec<2, U>& other);
 
 
+		GINNER_CONSTEXPR static length_t get_length() { return 2; }
+
+
 		GINNER_CONSTEXPR vec<2, T>& operator=(const vec<2, T>& other);
+
+
+		GINNER_CONSTEXPR T& operator[](length_t i);
+		GINNER_CONSTEXPR const T& operator[](length_t i) const;
 
 
 		GINNER_CONSTEXPR vec<2, T> operator+() const;
@@ -171,7 +188,14 @@ namespace gin
 		GINNER_CONSTEXPR vec(const vec<3, U>& other);
 
 
+		GINNER_CONSTEXPR static length_t get_length() { return 3; }
+
+
 		GINNER_CONSTEXPR vec<3, T>& operator=(const vec<3, T>& other);
+
+
+		GINNER_CONSTEXPR T& operator[](length_t i);
+		GINNER_CONSTEXPR const T& operator[](length_t i) const;
 
 
 		GINNER_CONSTEXPR vec<3, T> operator+() const;
@@ -243,7 +267,14 @@ namespace gin
 		GINNER_CONSTEXPR vec(const vec<4, U>& other);
 
 
+		GINNER_CONSTEXPR static length_t get_length() { return 4; }
+
+
 		GINNER_CONSTEXPR vec<4, T>& operator=(const vec<4, T>& other);
+
+
+		GINNER_CONSTEXPR T& operator[](length_t i);
+		GINNER_CONSTEXPR const T& operator[](length_t i) const;
 
 
 		GINNER_CONSTEXPR vec<4, T> operator+() const;
