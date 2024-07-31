@@ -15,6 +15,9 @@ namespace gin
 		using col_t = vec<2, T>;
 		using row_t = vec<2, T>;
 
+		using value_type = T;
+		using transpose_type = mat<2, 2, T>;
+
 	private:
 
 		row_t value[2];
@@ -111,6 +114,9 @@ namespace gin
 		using col_t = vec<2, T>;
 		using row_t = vec<3, T>;
 
+		using value_type = T;
+		using transpose_type = mat<3, 2, T>;
+
 	private:
 
 		row_t value[2];
@@ -206,6 +212,9 @@ namespace gin
 
 		using col_t = vec<2, T>;
 		using row_t = vec<4, T>;
+
+		using value_type = T;
+		using transpose_type = mat<4, 2, T>;
 
 	private:
 
@@ -305,6 +314,9 @@ namespace gin
 		using col_t = vec<3, T>;
 		using row_t = vec<2, T>;
 
+		using value_type = T;
+		using transpose_type = mat<2, 3, T>;
+
 	private:
 
 		row_t value[3];
@@ -400,6 +412,9 @@ namespace gin
 
 		using col_t = vec<3, T>;
 		using row_t = vec<3, T>;
+
+		using value_type = T;
+		using transpose_type = mat<3, 3, T>;
 
 	private:
 
@@ -506,6 +521,9 @@ namespace gin
 		using col_t = vec<3, T>;
 		using row_t = vec<4, T>;
 
+		using value_type = T;
+		using transpose_type = mat<4, 3, T>;
+
 	private:
 
 		row_t value[3];
@@ -610,6 +628,9 @@ namespace gin
 
 		using col_t = vec<4, T>;
 		using row_t = vec<2, T>;
+
+		using value_type = T;
+		using transpose_type = mat<2, 4, T>;
 
 	private:
 
@@ -723,6 +744,9 @@ namespace gin
 		using col_t = vec<4, T>;
 		using row_t = vec<3, T>;
 
+		using value_type = T;
+		using transpose_type = mat<3, 4, T>;
+
 	private:
 
 		row_t value[4];
@@ -834,6 +858,9 @@ namespace gin
 
 		using col_t = vec<4, T>;
 		using row_t = vec<4, T>;
+
+		using value_type = T;
+		using transpose_type = mat<4, 4, T>;
 
 	private:
 

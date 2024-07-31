@@ -560,8 +560,8 @@ namespace gin
 	GINNER_CONSTEXPR mat<2, 4, T>::mat(const X1& x1, const Y1& y1, const Z1& z1, const W1& w1,
 		const X2& x2, const Y2& y2, const Z2& z2, const W2& w2)
 	{
-		value[0] = vec<2, T>(x1, y1, z1, w1);
-		value[1] = vec<2, T>(x2, y2, z2, w2);
+		value[0] = vec<4, T>(x1, y1, z1, w1);
+		value[1] = vec<4, T>(x2, y2, z2, w2);
 	}
 
 	template<typename T>
