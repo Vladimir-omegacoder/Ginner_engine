@@ -3,7 +3,7 @@
 #ifndef GINNER_VEC
 
 #define GINNER_VEC
-#include "ginner_mat_setup.h"
+#include "ginner_math_setup.h"
 #include "ginner_types.h"
 
 namespace gin

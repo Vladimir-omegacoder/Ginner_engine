@@ -3,7 +3,7 @@
 #ifndef GINNER_MATH_FUNCTIONAL
 
 #define GINNER_MATH_FUNCTIONAL
-#include "ginner_mat_setup.h"
+#include "ginner_math_setup.h"
 #include "ginner_types.h"
 #include <cmath>
 

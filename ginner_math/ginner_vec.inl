@@ -5,6 +5,7 @@ namespace gin
 
 	template<typename T>
 	GINNER_CONSTEXPR vec<1, T>::vec()
+		: x()
 	{}
 
 	template<typename T>
@@ -184,6 +185,7 @@ namespace gin
 
 	template<typename T>
 	GINNER_CONSTEXPR vec<2, T>::vec()
+		: x(), y()
 	{}
 
 	template<typename T>
@@ -378,6 +380,7 @@ namespace gin
 
 	template<typename T>
 	GINNER_CONSTEXPR vec<3, T>::vec()
+		: x(), y(), z()
 	{}
 
 	template<typename T>
@@ -588,6 +591,7 @@ namespace gin
 
 	template<typename T>
 	GINNER_CONSTEXPR vec<4, T>::vec()
+		: x(), y(), z(), w()
 	{}
 
 	template<typename T>
