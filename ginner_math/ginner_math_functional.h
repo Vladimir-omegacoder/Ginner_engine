@@ -27,6 +27,10 @@ namespace gin
 
 	template <length_t L, typename T> GINNER_CONSTEXPR vec<L, T> normalize(const vec<L, T>& v);
 
+	template <length_t L, typename T> GINNER_CONSTEXPR vec<L, T> projection(const vec<L, T>& v1, const vec<L, T>& v2);
+
+	template <length_t L, typename T> GINNER_CONSTEXPR vec<L, T> rejection(const vec<L, T>& v1, const vec<L, T>& v2);
+
 
 
 	template <typename T> GINNER_CONSTEXPR T determinant(const mat2x2<T>& m);

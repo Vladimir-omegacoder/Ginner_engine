@@ -161,6 +161,18 @@ GINNER_CONSTEXPR gin::vec<L, T> gin::normalize(const vec<L, T>& v)
 	return v / length(v);
 }
 
+template<gin::length_t L, typename T>
+GINNER_CONSTEXPR gin::vec<L, T> gin::projection(const vec<L, T>& v1, const vec<L, T>& v2)
+{
+	return v2 * dot(v1, v2) / dot(v2, v2);
+}
+
+template<gin::length_t L, typename T>
+GINNER_CONSTEXPR gin::vec<L, T> gin::rejection(const vec<L, T>& v1, const vec<L, T>& v2)
+{
+	return v1 - projection(v1, v2);
+}
+
 template<typename T>
 GINNER_CONSTEXPR T gin::determinant(const mat2x2<T>& m)
 {

@@ -8,10 +8,10 @@ namespace gin
 	void test_vector_operations()
 	{
 
-		vec1f v1, expected_v1, actual_v1;
-		vec2f v2, expected_v2, actual_v2;
-		vec3f v3, expected_v3, actual_v3;
-		vec4f v4, expected_v4, actual_v4;
+		vec1f v1, v11, expected_v1, actual_v1;
+		vec2f v2, v22, expected_v2, actual_v2;
+		vec3f v3, v33, expected_v3, actual_v3;
+		vec4f v4, v44, expected_v4, actual_v4;
 		float expected_s, actual_s;
 		const float eps = 1e-7f;
 
@@ -19,6 +19,11 @@ namespace gin
 		v2 = vec2f(1, 2);
 		v3 = vec3f(1, 2, 3);
 		v4 = vec4f(1, 2, 3, 4);
+
+		v11 = vec1f(9);
+		v22 = vec2f(8, 7);
+		v33 = vec3f(8, 7, 6);
+		v44 = vec4f(8, 9, 2, 3);
 
 		// Dot product v1
 		actual_s = dot(v1, v1);
@@ -104,6 +109,36 @@ namespace gin
 		actual_v4 = normalize(v4);
 		expected_v4 = vec4f(0.182574185f, 0.365148371f, 0.547722557f, 0.730296743f);
 		assert("Normalize test: vec4: " && epsilon_equal(actual_v4, expected_v4, eps));
+
+		// Project v1
+		actual_v1 = projection(v1, v11);
+		expected_v1 = vec1f(1.f);
+		assert("Projection test: vec1: " && epsilon_equal(actual_v1, expected_v1, eps));
+
+		// Project v2
+		actual_v2 = projection(v2, v22);
+		expected_v2 = vec2f(1.557522123f, 1.362831858f);
+		assert("Projection test: vec2: " && epsilon_equal(actual_v2, expected_v2, eps));
+
+		// Project v3
+		actual_v3 = projection(v3, v33);
+		expected_v3 = vec3f(2.147651006f, 1.879194630f, 1.610738255f);
+		assert("Projection test: vec3: " && epsilon_equal(actual_v3, expected_v3, eps));
+
+		// Reject v1
+		actual_v1 = rejection(v1, v11);
+		expected_v1 = vec1f(0.f);
+		assert("Rejection test: vec1: " && epsilon_equal(actual_v1, expected_v1, eps));
+
+		// Reject v2
+		actual_v2 = rejection(v2, v22);
+		expected_v2 = vec2f(-0.557522123f, 0.637168142f);
+		assert("Rejection test: vec2: " && epsilon_equal(actual_v2, expected_v2, eps));
+
+		// Reject v3
+		actual_v3 = rejection(v3, v33);
+		expected_v3 = vec3f(-1.147651006f, 0.120805370f, 1.389261745f);
+		assert("Rejection test: vec3: " && epsilon_equal(actual_v3, expected_v3, eps));
 
 		std::cout << "vector operations tests passed.\n";
 
